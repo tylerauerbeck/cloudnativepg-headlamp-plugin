@@ -1,6 +1,14 @@
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
 import { CnpgClusterImageCatalog, CnpgImageCatalog } from '../resources/cluster';
 
+function getPgVersions(images: { major: number; image: string }[] | undefined): string {
+  if (!images || images.length === 0) return 'None';
+  return images
+    .map(i => i.major)
+    .sort((a, b) => b - a)
+    .join(', ');
+}
+
 export function ImageCatalogListPage() {
   return (
     <ResourceListView
@@ -11,11 +19,7 @@ export function ImageCatalogListPage() {
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },
         {
           label: 'PG Versions',
-          getter: (c: any) =>
-            c.jsonData.spec?.images
-              ?.map((i: any) => i.major)
-              .sort((a: number, b: number) => b - a)
-              .join(', ') ?? 'None',
+          getter: (c: any) => getPgVersions(c.jsonData.spec?.images),
         },
         { label: 'Image Count', getter: (c: any) => c.jsonData.spec?.images?.length ?? 0 },
         { label: 'Age', getter: (c: any) => c.getAge() },
@@ -33,11 +37,7 @@ export function ClusterImageCatalogListPage() {
         { label: 'Name', getter: (c: any) => c.metadata.name },
         {
           label: 'PG Versions',
-          getter: (c: any) =>
-            c.jsonData.spec?.images
-              ?.map((i: any) => i.major)
-              .sort((a: number, b: number) => b - a)
-              .join(', ') ?? 'None',
+          getter: (c: any) => getPgVersions(c.jsonData.spec?.images),
         },
         { label: 'Image Count', getter: (c: any) => c.jsonData.spec?.images?.length ?? 0 },
         { label: 'Age', getter: (c: any) => c.getAge() },
