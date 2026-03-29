@@ -1,6 +1,6 @@
 {
   "$schema": "https://github.com/googleapis/release-please/releases/latest/schema.json",
-  "release-type": "helm",
+  "release-type": "node",
   "packages": {
     ".": {}
   }
