@@ -1,12 +1,11 @@
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
-import { KubeObjectClass } from '@kinvolk/headlamp-plugin/lib/lib/k8s/KubeObject';
 import { CnpgFailoverQuorum } from '../resources/cluster';
 
 export function FailoverQuorumListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Failover Quorums"
-      resourceClass={CnpgFailoverQuorum as unknown as KubeObjectClass}
+      resourceClass={CnpgFailoverQuorum}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },

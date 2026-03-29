@@ -1,12 +1,11 @@
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
-import { KubeObjectClass } from '@kinvolk/headlamp-plugin/lib/lib/k8s/KubeObject';
 import { CnpgClusterImageCatalog, CnpgImageCatalog } from '../resources/cluster';
 
 export function ImageCatalogListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Image Catalogs"
-      resourceClass={CnpgImageCatalog as unknown as KubeObjectClass}
+      resourceClass={CnpgImageCatalog}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },
@@ -29,7 +28,7 @@ export function ClusterImageCatalogListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Cluster Image Catalogs"
-      resourceClass={CnpgClusterImageCatalog as unknown as KubeObjectClass}
+      resourceClass={CnpgClusterImageCatalog}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         {

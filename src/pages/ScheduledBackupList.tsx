@@ -1,6 +1,5 @@
-import { Chip, Tooltip } from '@mui/material';
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
-import { KubeObjectClass } from '@kinvolk/headlamp-plugin/lib/lib/k8s/KubeObject';
+import { Tooltip } from '@mui/material';
 import { CnpgBackup, CnpgScheduledBackup } from '../resources/cluster';
 
 function useLastBackup(scheduledBackupName: string, namespace: string) {
@@ -94,7 +93,7 @@ export function ScheduledBackupListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Scheduled Backups"
-      resourceClass={CnpgScheduledBackup as unknown as KubeObjectClass}
+      resourceClass={CnpgScheduledBackup}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },

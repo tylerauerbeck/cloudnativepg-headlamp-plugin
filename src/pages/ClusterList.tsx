@@ -1,12 +1,11 @@
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
-import { KubeObjectClass } from '@kinvolk/headlamp-plugin/lib/lib/k8s/KubeObject';
 import { CnpgCluster } from '../resources/cluster';
 
 export function ClusterListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Clusters"
-      resourceClass={CnpgCluster as unknown as KubeObjectClass}
+      resourceClass={CnpgCluster}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },

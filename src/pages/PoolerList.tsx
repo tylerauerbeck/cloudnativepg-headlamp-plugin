@@ -1,8 +1,9 @@
+import { K8s } from '@kinvolk/headlamp-plugin/lib';
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
-import { KubeObjectClass } from '@kinvolk/headlamp-plugin/lib/lib/k8s/KubeObject';
 import { CnpgPooler } from '../resources/cluster';
 
-const Pod = (window as any).pluginLib.K8s.ResourceClasses.Pod;
+// const Pod = (window as any).pluginLib.K8s.ResourceClasses.Pod;
+const Pod = K8s.ResourceClasses.Pod;
 
 function useRunningPodCount(poolerName: string, namespace: string) {
   const [pods] = Pod.useList({ namespace, labelSelector: `cnpg.io/poolerName=${poolerName}` });
@@ -53,7 +54,7 @@ export function PoolerListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Poolers"
-      resourceClass={CnpgPooler as unknown as KubeObjectClass}
+      resourceClass={CnpgPooler}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },

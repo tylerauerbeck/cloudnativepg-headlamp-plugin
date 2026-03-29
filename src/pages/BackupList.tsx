@@ -1,13 +1,12 @@
-import { Tooltip } from '@mui/material';
 import { ResourceListView } from '@kinvolk/headlamp-plugin/lib/CommonComponents';
-import { KubeObjectClass } from '@kinvolk/headlamp-plugin/lib/lib/k8s/KubeObject';
+import { Tooltip } from '@mui/material';
 import { CnpgBackup } from '../resources/cluster';
 
 export function BackupListPage() {
   return (
     <ResourceListView
       title="CloudNativePG Backups"
-      resourceClass={CnpgBackup as unknown as KubeObjectClass}
+      resourceClass={CnpgBackup}
       columns={[
         { label: 'Name', getter: (c: any) => c.metadata.name },
         { label: 'Namespace', getter: (c: any) => c.metadata.namespace },
