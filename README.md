@@ -1,5 +1,7 @@
 # headlamp-cloudnativepg
 
+[![codecov](https://codecov.io/gh/tylerauerbeck/cloudnativepg-headlamp-plugin/graph/badge.svg)](https://codecov.io/gh/tylerauerbeck/cloudnativepg-headlamp-plugin)
+
 This is the default template README for [Headlamp Plugins](https://github.com/kubernetes-sigs/headlamp).
 
 - The description of your plugin should go here.
