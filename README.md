@@ -1,8 +1,18 @@
-# headlamp-cloudnativepg
+<p align="center">
+  <img src="docs/images/headlamp-cnpg.png" alt="CNPG Headlamp Plugin" />
+</p>
+
+<h1 align="center">CNPG Headlamp Plugin</h1>
+
+---
+
+<p align="center">
 
 [![CI](https://github.com/tylerauerbeck/cloudnativepg-headlamp-plugin/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/tylerauerbeck/cloudnativepg-headlamp-plugin/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/tylerauerbeck/cloudnativepg-headlamp-plugin/graph/badge.svg)](https://codecov.io/gh/tylerauerbeck/cloudnativepg-headlamp-plugin)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/tylerauerbeck/cloudnativepg-headlamp-plugin/badge)](https://securityscorecards.dev/viewer/?uri=github.com/tylerauerbeck/cloudnativepg-headlamp-plugin)
+
+</p>
 
 This is the default template README for [Headlamp Plugins](https://github.com/kubernetes-sigs/headlamp).
 
