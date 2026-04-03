@@ -1,7 +1,7 @@
 {
   "name": "headlamp-cloudnativepg",
   "version": "0.1.0",
-  "description": "Your Headlamp plugin",
+  "description": "A headlamp plugin for the cloudnative-pg system",
   "scripts": {
     "start": "headlamp-plugin start",
     "build": "headlamp-plugin build",
@@ -22,7 +22,9 @@
     "kubernetes",
     "kubernetes-ui",
     "kubernetes-debugging",
-    "plugins"
+    "plugins",
+    "cloudnative-pg",
+    "cnpg"
   ],
   "prettier": "@headlamp-k8s/eslint-config/prettier-config",
   "eslintConfig": {
