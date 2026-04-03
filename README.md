@@ -1,5 +1,6 @@
 # headlamp-cloudnativepg
 
+[![CI](https://github.com/tylerauerbeck/cloudnativepg-headlamp-plugin/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/tylerauerbeck/cloudnativepg-headlamp-plugin/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/tylerauerbeck/cloudnativepg-headlamp-plugin/graph/badge.svg)](https://codecov.io/gh/tylerauerbeck/cloudnativepg-headlamp-plugin)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/tylerauerbeck/cloudnativepg-headlamp-plugin/badge)](https://securityscorecards.dev/viewer/?uri=github.com/tylerauerbeck/cloudnativepg-headlamp-plugin)
 
