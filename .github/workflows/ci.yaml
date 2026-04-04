@@ -23,7 +23,33 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install 
+        run: npm install
 
       - name: Run tests
         run: npm test
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Build plugin
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: plugin-dist
+          path: dist/
+          retention-days: 1
