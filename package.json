@@ -1,6 +1,6 @@
 {
   "name": "headlamp-cloudnativepg",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A headlamp plugin for the cloudnative-pg system",
   "scripts": {
     "start": "headlamp-plugin start",
